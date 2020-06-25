@@ -3,35 +3,35 @@ class Person {
 }
 
 class Member extends Person {
-    access() {
-        console.log('У тебя есть доступ')
-    }
+  access() {
+    console.log('У тебя есть доступ')
+  }
 }
 
 class Guest extends Person {
-    isGuest = true
+  isGuest = true
 }
 
 class Frontend extends Member {
-    canCreateFrontend() {
+  canCreateFrontend() {
 
-    }
+  }
 }
 
 class Backend extends Member {
-    canCreateBackend() {
+  canCreateBackend() {
 
-    }
+  }
 }
 
 class PersonFromDefferentCompany extends Guest {
-    access() {
-        throw new Error('У тебя нет доступа! Иди к себе!')
-    }
+  access() {
+    throw new Error('У тебя нет доступа! Иди к себе!')
+  }
 }
 
 function openSecretDoor(member) {
-    member.access()
+  member.access()
 }
 
 openSecretDoor(new Frontend())

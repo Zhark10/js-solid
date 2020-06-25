@@ -1,11 +1,11 @@
 class Component {
-    isComponent = true
+  isComponent = true
 }
 
 class ComponentWithTemplate extends Component {
-    render() {
-        return `<div>Component</div>`
-    }
+  render() {
+    return `<div>Component</div>`
+  }
 }
 
 class HigherOrderComponent extends Component {
@@ -13,26 +13,26 @@ class HigherOrderComponent extends Component {
 }
 
 class HeaderComponent extends ComponentWithTemplate {
-    onInit() {}
+  onInit() {}
 }
 
 class FooterComponent extends ComponentWithTemplate {
-    afterInit() {}
+  afterInit() {}
 }
 
 function renderComponent(component) {
-    console.log(component.render())
+  console.log(component.render())
 }
 
 class HOC extends HigherOrderComponent {
-    render() {
-        throw new Error('Render is impossible here')
-    }
+  render() {
+    throw new Error('Render is impossible here')
+  }
 
-    wrapComponent(component) {
-        component.wrapped = true
-        return component
-    }
+  wrapComponent(component) {
+    component.wrapped = true
+    return component
+  }
 }
 
 renderComponent(new HeaderComponent())
