@@ -39,12 +39,12 @@ dog.swim()
 
 const eagle = new Eagle('Орел')
 
-eagle.swim()
+eagle.fly()
 eagle.walk()
 
-const whale = new Eagle('Какой-то кит')
+const whale = new Whale('Какой-то кит')
 
-eagle.swim()
+whale.swim()
 
 // ----------------------- WRONG CODE!!! ----------------------------
 
